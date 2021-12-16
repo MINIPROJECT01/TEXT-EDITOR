@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <style>
+            #header{
+                background-color : darkblue;
+                color : white;
+                text-align : Center;
+                padding : 0.5px;
+            }
+
+            #EditingOptions{
+                background-color : rgb(3, 48, 78);
+                color : white;
+            }
+
+            #Body{
+                color : white;
+                text-align : center;
+            }
+   .side {
+            margin-left: 0;
+        }
+          
+    .dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.choose {
+  margin-top: 5px;
+  width: 120px;
+  height: 25px;
+  background-color: transparent;
+  cursor:pointer;
+  overflow: hidden; 
+}
+        </style>
+        <title>Text Editor</title>
+        <link rel="stylesheet" type="text/css" href="css/style2.css"/>
+    </head>
+
+    <body bgcolor="navyblue">
+        <div id="header">
+            <h3> Text Editor</h3>
+        </div>
+ <section class="">
+        <div id = "EditingOptions">
+       <div class="dropdown">
+  <button class="dropbtn">File</button>
+  <div class="dropdown-content">
+    <button onclick="saveas()">Saveas</button>
+    <input type="file" id="file-input" class="choose"/>
+  </div>
+</div>
+<div class="dropdown">
+  <button class="dropbtn">Tools</button>
+  <div class="dropdown-content">
+    <a href="#">    <button type="button" 
+                            onclick="f8()" 
+                            class="btn shadow-sm btn-outline-primary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Capitalize Text">
+            Capitalize</button></a>
+
+         
+    <a href="#">    <button type="button" 
+                            onclick="f1()" 
+                            class=" shadow-sm btn btn-outline-secondary" 
+                            data-toggle="tooltip"
+                            data-placement="top" 
+                            title="Bold Text">
+            Bold</button></a>
+    <a href="#"><button type="button" 
+                            onclick="f2()" 
+                            class="shadow-sm btn btn-outline-success" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Italic Text">
+            Italic</button></a>
+  <a href="#"> <button type="button" 
+                            onclick="f6()" 
+                            class="btn shadow-sm btn-outline-secondary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Uppercase Text">
+            Upper Case</button></a>
+<a href="#"><button type="button" 
+                            onclick="f7()" 
+                            class="btn shadow-sm btn-outline-primary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Lowercase Text">
+            Lower Case</button></a>
+<a href="#"><button type="button" 
+                            onclick="f9()" 
+                            class="btn shadow-sm btn-outline-primary side" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Tooltip on top">
+            Clear Text</button></a>
+ <a href="#"> <button type="button" 
+                            onclick="f3()" 
+                            class=" shadow-sm btn btn-outline-primary" 
+                            data-toggle="tooltip" 
+                            data-placement="top"
+                            title="Left Align">
+            <i class="fas fa-align-left"></i></button>
+                    <button type="button" 
+                            onclick="f4()" 
+                            class="btn shadow-sm btn-outline-secondary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Center Align">
+            <i class="fas fa-align-center"></i></button>
+                    <button type="button" 
+                            onclick="f5()" 
+                            class="btn shadow-sm btn-outline-primary" 
+                            data-toggle="tooltip" 
+                            data-placement="top" 
+                            title="Right Align">
+            <i class="fas fa-align-right"></i></button></a>
+  </div>
+</div>
+
+        <div id="Body">
+            <h2>Welcome!!!</h2>
+            <div class="row">
+            <div class="col-md-3 col-sm-3">
+            </div>
+            <div class="col-md-6 col-sm-9">
+                <div class="flex-box">
+                    <textarea id="file-content" 
+                              class="input shadow" 
+                              name="name" 
+                              rows="37" 
+                              cols="130" 
+                              placeholder="file content">
+                    </textarea>
+                </div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+        </div>
+ </section class>
+   
+<script src="home1.js"></script>
+    </body>
+</html>

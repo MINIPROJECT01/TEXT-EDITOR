@@ -1,0 +1,90 @@
+async function saveas()
+          {
+            await window.showSaveFilePicker();
+          }
+          let filehandle;
+async function button()
+{
+   [filehandle]=  await window.showOpenFilePicker();
+   let fileData = await filehandle.getFile();
+   let text = await fileData.text();
+   textarea.innerText = text;
+}
+async function save()
+{
+    let stream = await filehandle.createWritable();
+    await stream.write(textarea.innerText)
+    await stream.close();
+}
+
+
+
+function readSingleFile(e) {
+  var file = e.target.files[0];
+  if (!file) {
+    return;
+  }
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var contents = e.target.result;
+    displayContents(contents);
+  };
+  reader.readAsText(file);
+}
+
+function displayContents(contents) {
+  var element = document.getElementById('file-content');
+  element.textContent = contents;
+}
+
+document.getElementById('file-input')
+  .addEventListener('change', readSingleFile, false);
+function f1() {
+	//function to make the text bold using DOM method
+	document.getElementById("file-content").style.fontWeight = "bold";
+}
+
+function f2() {
+	//function to make the text italic using DOM method
+	document.getElementById("file-content").style.fontStyle = "italic";
+}
+
+function f3() {
+	//function to make the text alignment left using DOM method
+	document.getElementById("file-content").style.textAlign = "left";
+}
+
+function f4() {
+	//function to make the text alignment center using DOM method
+	document.getElementById("file-content").style.textAlign = "center";
+}
+
+function f5() {
+	//function to make the text alignment right using DOM method
+	document.getElementById("file-content").style.textAlign = "right";
+}
+
+function f6() {
+	//function to make the text in Uppercase using DOM method
+	document.getElementById("file-content").style.textTransform = "uppercase";
+}
+
+function f7() {
+	//function to make the text in Lowercase using DOM method
+	document.getElementById("file-content").style.textTransform = "lowercase";
+}
+
+function f8() {
+	//function to make the text capitalize using DOM method
+	document.getElementById("file-content").style.textTransform = "capitalize";
+}
+
+function f9() {
+	//function to make the text back to normal by removing all the methods applied
+	//using DOM method
+	document.getElementById("file-content").style.fontWeight = "normal";
+	document.getElementById("file-content").style.textAlign = "left";
+	document.getElementById("file-content").style.fontStyle = "normal";
+	document.getElementById("file-content").style.textTransform = "capitalize";
+	document.getElementById("file-content").value = " ";
+}
